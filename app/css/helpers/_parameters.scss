@@ -1,0 +1,34 @@
+//support IE
+$legacy-support-for-ie: false !default;
+
+//colors
+$white: #fff;
+$black: #000;
+$light: #fefefe;
+$gray: #ebebeb;
+$dark-gray: #ccc;
+$green: #36C336;
+$red: #ff3b00;
+$blue: #00aeff;
+$light-blue: #00aeff;
+$orange: #f96a01;
+$color-f3: #333;
+$color-f6: #666;
+$color-f9: #999;
+
+//base
+$browser-default-font-size: 16px !default;
+
+//borders
+$border-light: 1px solid rgba(0,0,0,.1);
+$border-dark: 1px solid rgba(0,0,0,.2);
+
+//shadow
+$shadow-around: -2px 2px 5px rgba($black,.1), 2px 2px 5px rgba($black,.1);
+$shadow-down: 0px 2px 5px rgba($black,.1);
+
+//media queries
+$desktop: 800px;
+$tablet: 600px;
+$mobile: 480px;
+

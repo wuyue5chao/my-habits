@@ -1,0 +1,65 @@
+//common
+%clearfix{
+  @if $legacy-support-for-ie {
+    *zoom: 1;
+  }
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+    font: 0/0 a;
+    visibility:hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+%fl{
+  float: left;
+}
+
+%fr{
+  float: right;
+}
+
+%center{
+  text-align: center;
+}
+
+%right{
+  text-align: right;
+}
+
+%left{
+  text-align: left;
+}
+
+//=====================//
+%fixed{
+  position: fixed;
+  width: 100%;
+  left:0;
+  background: $light;
+  z-index: 101;
+}
+
+%outer-box{
+  @include remCalc(margin,10);
+  box-shadow: $shadow-down;
+  background: $light;
+}
+
+%common-box{
+  @include remCalc(padding,10,10);
+  @extend %border-box;
+}
+
+%gray-sm{
+  color: $color-f9;
+  font-size: pxTorem(12px);
+}
+
+%border-box{
+  box-sizing: border-box;
+}

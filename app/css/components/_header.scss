@@ -1,0 +1,26 @@
+header{
+  @extend %fixed;
+  top: 0;
+  height: 44px;
+  text-align: center;
+  border-bottom: $border-light;
+  @extend %border-box;
+  h2{
+    line-height: 44px;
+    font-size: pxTorem(16px);
+  }
+  > span{
+    @include inline-block;
+    position: absolute;
+    top: 5px;
+    &:first-child{
+      left: 4px;
+    }
+    &:last-child{
+      right: 4px;
+    }
+  }
+  .icons{
+
+  }
+}

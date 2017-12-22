@@ -1,0 +1,104 @@
+.today-list{
+  .item{
+    @include mb(10);
+    background: $light;
+    //box-shadow: $shadow-down;
+    //border-bottom: $border-light;
+    .itm-habit{
+      @include flex-box;
+      .h-icon{
+        @extend %common-box;
+        flex: 1;
+        .h-circle{
+          @include remCalc(width,40);
+          @include remCalc(height,40);
+          @include remCalc(padding-top,5);
+          border-radius: 50%;
+          overflow: hidden;
+          box-sizing: border-box;
+          color: $white;
+          @extend %center;
+
+          &.pass{
+            background: $green;
+          }
+          &.fail{
+            background: $red;
+          }
+          &.goto{
+            background: $light-blue;
+          }
+          &.skip{
+            background: $dark-gray;
+          }
+          > span{
+            display: block;
+            &:last-child{
+              font-size: pxTorem(12px);
+            }
+          }
+        }
+      }
+      .h-info{
+        @extend %common-box;
+        flex: 4;
+        line-height: 1.5;
+        .name{
+          font-size: pxTorem(14px);
+        }
+        .log{
+          @extend %gray-sm;
+        }
+      }
+      .h-set{
+        @extend %common-box;
+        flex: 1;
+        .sets{
+          @include remCalc(height,40);
+          width: 100%;
+
+          .icons{
+            color: $color-f9;
+          }
+        }
+      }
+    }
+    .itm-progress{
+      @include flex-box;
+      width: 100%;
+      @include remCalc(height, 3);
+      background: $dark-gray;
+      > span{
+        flex: 1;
+        @include inline-block;
+        height: 100%;
+        &.pass{
+          background: $green;
+        }
+        &.fail{
+          background: $red;
+        }
+      }
+
+    }
+    .itm-sets{
+      .arrow-up{
+
+      }
+      .set-lists{
+        background: $gray;
+        font-size: pxTorem(12px);
+        color: $color-f6;
+        @extend %center;
+        @extend %common-box;
+        @include flex-box;
+        > span{
+          flex: 1;
+          .fa{
+            color: $color-f9;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.habitsWrap{
+  h3{
+    @extend %common-box;
+    font-size: pxTorem(14px);
+  }
+}
+
+.habits-list{
+  box-shadow: $shadow-down;
+  background: $light;
+  .itm-habit{
+    @include flex-box;
+    @extend %common-box;
+    border-bottom: $border-light;
+    .icons{
+      color: $dark-gray;
+    }
+    > div{
+      &:first-child{
+        flex: 6;
+        > p{
+          &:first-child{
+            font-size: pxTorem(14px);
+            @include mb(5);
+          }
+
+          &:last-child{
+            @extend %gray-sm;
+          }
+        }
+      }
+      &:last-child{
+        flex: 1;
+        @extend %right;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.switch{
+  @include remCalc(width,40);
+  @include remCalc(height,20);
+  @include remCalc(border-radius,10);
+  @include inline-block;
+  border: $border-light;
+  position: relative;
+  overflow: hidden;
+  .block{
+    @include inline-block;
+    @include remCalc(width,20);
+    @include remCalc(height,20);
+    @include remCalc(border-radius,10);
+    background: $light;
+    box-shadow: $shadow-around;
+    position: absolute;
+    top:0;
+  }
+
+  &.open{
+    background: $green;
+    border-color: $green;
+    .block{
+      right: 0;
+    }
+  }
+}

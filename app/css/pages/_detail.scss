@@ -1,0 +1,112 @@
+.info-total{
+  @extend %outer-box;
+  @include mb(10);
+  @include flex-box(content,stretch);
+  .item-tit{
+    flex: 5;
+    h3{
+      font-size: pxTorem(16px);
+      @include mb(10);
+    }
+  }
+  .sub-tit{
+    @extend %gray-sm;
+  }
+  .item-tit{
+    @extend %common-box;
+  }
+  .item-amount{
+    flex:1;
+    @include flex-box;
+    flex-direction: column;
+    background: $green;
+    color: $white;
+    @extend %center;
+    > span{
+      flex: 1;
+      @include flex-box;
+      &:first-child{
+        font-size: pxTorem(22px);
+      }
+      &:last-child{
+        font-size: pxTorem(12px);
+      }
+    }
+  }
+}
+.info-detail{
+  @extend %outer-box;
+  @include mb(10);
+  .info-detail-box{
+    @extend %common-box;
+    &:first-child{
+      border-bottom: $border-light;
+    }
+    h3{
+      @include remCalc(margin-bottom,10);
+      font-size: pxTorem(14px);
+    }
+    .info-box{
+      @include flex-box;
+      @extend %center;
+      &.total{
+        > p > span:first-child{
+          color: $red;
+        }
+      }
+      &.passed{
+        > p > span:first-child{
+          color: $green;
+        }
+      }
+      > p{
+        flex: 1;
+        span{
+          display: block;
+          &:first-child{
+            @include mb(5);
+          }
+          &:last-child{
+            @extend %gray-sm;
+          }
+        }
+      }
+    }
+  }
+}
+
+.info-chart{
+  @extend %outer-box;
+  @extend %common-box;
+  @include mb(10);
+  .chart{
+    width: 100%;
+    height: 100px;
+  }
+}
+
+.info-canlender{
+  @extend %outer-box;
+  @include mb(10);
+  .marks{
+    @extend %gray-sm;
+    @extend %right;
+    @extend %common-box;
+  }
+}
+
+.current-month{
+  @extend %common-box;
+  @include flex-box(space-between,center);
+  border-bottom: $border-light;
+  > span{
+    @include flex-box;
+    font-size: pxTorem(14px);
+  }
+  > p{
+    @include flex-box;
+    > span:first-child{
+      font-size: pxTorem(12px);
+    }
+  }
+}

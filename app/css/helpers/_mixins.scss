@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+@mixin inline-block{
+  display: inline-block;
+  @if $legacy-support-for-ie{
+    *display: inline; *zoom: 1;
+  }
+}
+
+//px-to-rem
+@mixin font-size($target){
+  //font-size: $target;
+  font-size: ($target / $browser-default-font-size) * 1rem;
+}
+
+@mixin remCalc($property, $values...){
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max{
+    $value: strip-units(nth($values, $i));
+    $pxValues: #{$pxValues + $value}px;
+
+    @if $i < $max{
+      $pxValues: #{$pxValues + " "};
+    }
+  }
+
+  @for $i from 1 through $max{
+    $value: strip-units(nth($values, $i));
+    $browser-default-font-size: strip-units($browser-default-font-size);
+    $remValues: #{$remValues + $value / $browser-default-font-size}rem;
+
+    @if $i < $max{
+      $remValues: #{$remValues + " "};
+    }
+  }
+
+  //#{$property}: $pxValues;
+  #{$property}: $remValues;
+
+  //margin:10px 0 ==> @include remCalc(margin,10,0);
+}
+
+//用border生成三角形
+@mixin triangle($borderColor, $direction: top, $size: 10px){  //设置默认值，未设置的参数放在前面
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+
+  @if $direction == top {
+    border-bottom: $size solid $borderColor;
+    border-left: $size dashed transparent;
+    border-right: $size dashed transparent;
+  }
+  @else if $direction == right {
+    border-left: $size solid $borderColor;
+    border-top: $size dashed transparent;
+    border-bottom: $size dashed transparent;
+  }
+  @else if $direction == bottom {
+    border-top: $size solid $borderColor;
+    border-left: $size dashed transparent;
+    border-right: $size dashed transparent;
+  }
+  @else if $direction == left {
+    border-right: $size solid $borderColor;
+    border-top: $size dashed transparent;
+    border-bottom: $size dashed transparent;
+  }
+  @else if $direction == 1 {  //直角三角形 左上
+    border-top: $size solid $borderColor;
+    border-right: $size dashed transparent;
+  }
+  @else if $direction == 2 {  //直角三角形 右上
+    border-top: $size solid $borderColor;
+    border-left: $size dashed transparent;
+  }
+  @else if $direction == 3 {  //直角三角形 左下
+    border-bottom: $size solid $borderColor;
+    border-right: $size dashed transparent;
+  }
+  @else if $direction == 4 {  //直角三角形 右下
+    border-bottom: $size solid $borderColor;
+    border-left: $size dashed transparent;
+  }
+}
+
+@mixin flex-box($justify:center,$align:center){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin mb($value){
+  @include remCalc(margin-bottom,$value);
+}

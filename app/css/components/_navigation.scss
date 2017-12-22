@@ -1,0 +1,15 @@
+footer{
+  @extend %fixed;
+  bottom: 0;
+  border-top: $border-light;
+  @include font-size(12px);
+  .navigation{
+    display: flex;
+    height: 44px;
+    li{
+      flex: 1;
+      text-align: center;
+    }
+  }
+
+}

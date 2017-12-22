@@ -1,0 +1,15 @@
+.common-tab{
+  display: flex;
+  text-align: center;
+  font-size: pxTorem(14px);
+  border-bottom: $border-light;
+  li {
+    flex: 1;
+    @include remCalc(padding-bottom,10);
+    border-bottom: 2px solid transparent;
+    &.on{
+      color: $green;
+      border-bottom-color: $green;
+    }
+  }
+}

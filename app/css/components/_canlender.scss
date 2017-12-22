@@ -1,0 +1,68 @@
+.canlender-box{
+  @extend %center;
+  @include mb(20px);
+  .week{
+    @include flex-box;
+    > span{
+      flex:1;
+      @include flex-box;
+      @extend %gray-sm;
+      @include remCalc(height,40);
+    }
+  }
+  .date{
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    .datebox{
+      @include remCalc(height,40);
+
+      @include flex-box;
+      width: 14.2857%;
+
+      .itm{
+        @include flex-box;
+        border: 1px solid $white;
+        width: 100%;
+        height: 100%;
+        background: $gray;
+        color: $color-f9;
+        > span{
+          //@include flex-box;
+        }
+      }
+    }
+  }
+}
+
+.canlender-fix{
+  @extend %fixed;
+  top:44px;
+  width: 100%;
+  background: $light;
+  box-shadow: $shadow-down;
+  @include remCalc(padding-bottom, 10);
+  .week{
+    > span{
+      @include remCalc(height, 30);
+    }
+  }
+  .date{
+    @extend %gray-sm;
+    .datebox{
+      @include remCalc(height, 24);
+      .block{
+        @include remCalc(width, 24);
+        @include remCalc(height, 24);
+        @include remCalc(line-height, 24);
+
+      }
+      &.current{
+        .block{
+          background: $green;
+          color: $white;
+        }
+      }
+    }
+  }
+}
