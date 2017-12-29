@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/app.css">
+</head>
+<body>
+<header>
+    <a href="habits.html" class="icons"><i class="icon-hamburger"></i></a>
+    <h2>ADD</h2>
+    <a href="add.html" class="icons"><i class="icon-plus"></i></a>
+</header>
+<section class="centerWrap">
+    <div class="actgroup">
+        <div class="actbox">
+            <span>行为名称</span>
+            <p><input type="text" placeholder="请输入行为名称" value=""/></p>
+        </div>
+    </div>
+    <div class="actgroup">
+        <p class="tip">是否有益</p>
+        <div class="actbox">
+            <span><em class="fontgreen">有益</em></span>
+            <i class="icon-mark"></i>
+        </div>
+        <div class="actbox">
+            <span><em class="fontred">无益</em></span>
+        </div>
+    </div>
+    <div class="actgroup">
+        <div class="actbox">
+            <span>量化记录</span>
+            <p>
+                <span class="switch open">
+                    <i class="block"></i>
+                </span>
+            </p>
+        </div>
+        <p class="tip">
+            记录此行为具体的完成数量<br/>
+            关闭量化记录，则简单记录是否做了此行为
+        </p>
+    </div>
+    <div class="actgroup">
+        <div class="actbox">
+            <span>合格基准</span>
+            <p><input type="text" placeholder="请输入每日合格基准" value=""/></p>
+        </div>
+        <p class="tip">每日记录的值大于或等于此基准值视为合格</p>
+    </div>
+    <div class="actgroup">
+        <div class="actbox">
+            <span>记录单位</span>
+            <p><input type="text" placeholder="请输入单位" value=""/></p>
+        </div>
+        <p class="tip">例如：公里、分钟、个...</p>
+    </div>
+    <div class="actgroup">
+        <div class="actbox">
+            <span>行为频率</span>
+            <p>
+                <input type="text" placeholder="请选择频率" value=""/>
+                <i class="icon-arrow-rt"></i>
+            </p>
+        </div>
+        <!--<p class="tip">每日记录的值大于或等于此基准值视为合格</p>-->
+    </div>
+    <div class="actgroup">
+        <div class="actbox">
+            <span>打开提醒</span>
+            <p>
+                <span class="switch open">
+                    <i class="block"></i>
+                </span>
+            </p>
+        </div>
+    </div>
+</section>
+<footer>
+    <ul class="navigation">
+        <li>TODAY</li>
+        <li>HABITS</li>
+        <li>SET</li>
+    </ul>
+</footer>
+</body>
+</html>
