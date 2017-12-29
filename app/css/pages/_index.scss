@@ -1,3 +1,4 @@
+/*index*/
 .today-list{
   .item{
     @include mb(10);
@@ -26,7 +27,7 @@
             background: $red;
           }
           &.goto{
-            background: $light-blue;
+            background: lighten($blue,50%);
           }
           &.skip{
             background: $dark-gray;

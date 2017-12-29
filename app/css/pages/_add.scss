@@ -1,3 +1,4 @@
+/*add*/
 .habitsWrap{
   h3{
     @extend %common-box;
@@ -36,3 +37,49 @@
     }
   }
 }
+
+.actgroup{
+  @include remCalc(margin,10,0);
+  .tip{
+    @include remCalc(padding,10);
+    @extend %gray-sm;
+    line-height: 1.5;
+  }
+
+  .actbox{
+    @extend %common-box;
+    @extend %border-box;
+    @include flex-box;
+    background: $light;
+    border-top: $border-light;
+    border-bottom: $border-light;
+    font-size: pxTorem(14px);
+    margin-top: -1px;
+    > span{
+      flex: 1;
+
+    }
+    > p{
+      flex: 4;
+      color: $color-f6;
+      @include flex-box(flex-end,center);
+      @include remCalc(line-height,22);
+      > input{
+        @extend %right;
+        width: 70%;
+        color: $color-f6;
+      }
+      > label{
+        flex: 1;
+        @extend %center;
+      }
+    }
+    &.focus{
+      border-top-color: $green;
+      border-bottom-color: $green;
+    }
+  }
+}
+
+
+

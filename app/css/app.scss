@@ -2,7 +2,6 @@
 
 //Vendors normalize and dependencies
 @import "vendors/normalize";
-@import "vendors/icono.min";
 
 //Helpers
 @import "helpers/parameters";  // 变量声明
@@ -14,7 +13,8 @@
 @import "helpers/extend";      // %
 
 //Components
-@import "components/switch";  //组件样式
+@import "components/icons";  //组件样式
+@import "components/switch";
 @import "components/footer";
 @import "components/header";
 @import "components/navigation";
@@ -26,6 +26,10 @@
 @import "pages/detail";
 @import "pages/add";
 @import "pages/set";
+@import "pages/logs";
 
 //Layout
 @import "layout/responsive";   //媒体查询
+
+
+

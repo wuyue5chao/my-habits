@@ -97,3 +97,82 @@
 @mixin mb($value){
   @include remCalc(margin-bottom,$value);
 }
+
+@mixin arrow($direction:right, $size:7, $color:#888){
+  content: '';
+  @include inline-block;
+  @include remCalc(width,$size);
+  @include remCalc(height,$size);
+  border-top: 1px solid $color;
+  border-right: 1px solid $color;
+
+  @if $direction == right {
+    transform: rotate(45deg);
+  }
+  @else if $direction == left {
+    transform: rotate(-135deg);
+  }
+  @else if $direction == up {
+    transform: rotate(-45deg);
+  }
+  @else if $direction == down {
+    transform: rotate(135deg);
+  }
+
+  @include remCalc(margin,0,2);
+}
+
+@mixin mark($color:$blue,$size:10){
+  content: '';
+  @include inline-block;
+  @include remCalc(width,$size);
+  @include remCalc(height,$size/2);
+  border-left: 2px solid $color;
+  border-bottom: 2px solid $color;
+  transform: rotate(-45deg);
+  @include remCalc(margin,0,2);
+}
+
+@mixin icon-plus($size:18, $width:2, $color:#bbb){
+  position: relative;
+  @include inline-block;
+  @extend %border-box;
+  @include remCalc(width,$size);
+  @include remCalc(height,$size);
+  &::before, &::after{
+    content:'';
+    position: absolute;
+    top: 50%;
+    display: block;
+    @include remCalc(width,$size);
+    @include remCalc(height,$width);
+    background: $color;
+  }
+  &::before{
+    left: 0;
+  }
+  &::after{
+    transform: rotate(90deg);
+  }
+}
+
+@mixin icon-hamburger($width:18, $size:2px, $color:#bbb){
+  @include inline-block;
+  @extend %border-box;
+  position: relative;
+  border-bottom: $size solid $color;
+  border-top: $size solid $color;
+  @include remCalc(width, $width);
+  @include remCalc(height, $width - 2);
+  &::after{
+    content: '';
+    @include inline-block;
+    width: 100%;
+    height: $size;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -$size/2;
+    background: $color;
+  }
+}

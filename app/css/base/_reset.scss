@@ -1,10 +1,14 @@
 html,body{font-size: $browser-default-font-size; background: #f5f6f7; color: $color-f3;}
+i,em,var{font-style: normal;}
 
 a{text-decoration: none;color: $color-f3;}
 h2,h3,h4,p{margin: 0;}
 ul,li{margin: 0; padding: 0; list-style: none;}
-
-.icons{color: $color-f6;}
+::-webkit-input-placeholder{color:#bbb;}
+input{
+  border: 0;
+  outline: none;
+}
 
 .centerWrap{
   @include remCalc(padding,44,0);

@@ -45,7 +45,7 @@
 }
 
 %outer-box{
-  @include remCalc(margin,10);
+  @include remCalc(margin,10,0);
   box-shadow: $shadow-down;
   background: $light;
 }

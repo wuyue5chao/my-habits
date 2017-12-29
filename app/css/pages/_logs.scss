@@ -1,0 +1,20 @@
+.logs-list{
+  @extend %outer-box;
+  .item{
+    @extend %common-box;
+    border-bottom: $border-light;
+    .content{
+      font-size: pxTorem(14px);
+      @include remCalc(padding-bottom,10);
+    }
+    .date{
+      @include flex-box(space-between);
+      font-size: pxTorem(12px);
+      > span{
+        &:first-child{
+          @extend %gray-sm;
+        }
+      }
+    }
+  }
+}
