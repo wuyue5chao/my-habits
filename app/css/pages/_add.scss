@@ -55,6 +55,10 @@
     border-bottom: $border-light;
     font-size: pxTorem(14px);
     margin-top: -1px;
+
+    .icon-mark{
+      display: none;
+    }
     > span{
       flex: 1;
 
@@ -77,6 +81,11 @@
     &.focus{
       border-top-color: $green;
       border-bottom-color: $green;
+    }
+    &.selected{
+      .icon-mark{
+        @include inline-block;
+      }
     }
   }
 }

@@ -3,6 +3,10 @@
 
 }
 
+.icon-back{
+  @include arrow(left,11,2px,#bbb);
+}
+
 .icon-hamburger{
   @include icon-hamburger;
 }

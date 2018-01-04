@@ -98,13 +98,13 @@
   @include remCalc(margin-bottom,$value);
 }
 
-@mixin arrow($direction:right, $size:7, $color:#888){
+@mixin arrow($direction:right, $size:7, $width:1px, $color:#888){
   content: '';
   @include inline-block;
   @include remCalc(width,$size);
   @include remCalc(height,$size);
-  border-top: 1px solid $color;
-  border-right: 1px solid $color;
+  border-top: $width solid $color;
+  border-right: $width solid $color;
 
   @if $direction == right {
     transform: rotate(45deg);

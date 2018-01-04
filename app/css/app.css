@@ -463,6 +463,16 @@ header, footer, .canlender-fix {
   box-sizing: border-box; }
 
 /*icons*/
+.icon-back {
+  content: '';
+  display: inline-block;
+  width: 0.6875rem;
+  height: 0.6875rem;
+  border-top: 2px solid #bbb;
+  border-right: 2px solid #bbb;
+  transform: rotate(-135deg);
+  margin: 0rem 0.125rem; }
+
 .icon-hamburger {
   display: inline-block;
   position: relative;
@@ -824,6 +834,8 @@ footer {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     font-size: 0.875rem;
     margin-top: -1px; }
+    .actgroup .actbox .icon-mark {
+      display: none; }
     .actgroup .actbox > span {
       flex: 1; }
     .actgroup .actbox > p {
@@ -841,6 +853,8 @@ footer {
     .actgroup .actbox.focus {
       border-top-color: #36C336;
       border-bottom-color: #36C336; }
+    .actgroup .actbox.selected .icon-mark {
+      display: inline-block; }
 
 .logs-list .item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
