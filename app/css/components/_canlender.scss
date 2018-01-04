@@ -16,20 +16,65 @@
     align-items: stretch;
     flex-wrap: wrap;
     .datebox{
-      @include remCalc(height,40);
+      @include remCalc(height,50);
 
       @include flex-box;
       width: 14.2857%;
 
       .itm{
         @include flex-box;
+        @include flex-box;
+        flex-direction: column;
         border: 1px solid $white;
         width: 100%;
         height: 100%;
         background: $gray;
         color: $color-f9;
-        > span{
-          //@include flex-box;
+        font-size: pxTorem(14px);
+        .day{
+          @include mb(5);
+          display: block;
+        }
+        .num{
+          display: none;
+        }
+        .dot{
+          @include dot;
+          display: block;
+        }
+      }
+      &.pass .itm{
+        background: $green;
+        color: $white;
+      }
+      &.fail .itm{
+        background: $red;
+        color: $white;
+      }
+      &.skip .itm{
+        background: $dark-gray;
+        color: $white;
+      }
+
+    }
+
+    &.number{
+      .datebox{
+        &.skip .itm .num{
+          visibility: hidden;
+        }
+      }
+      .itm{
+        .day{
+          @include remCalc(padding-bottom,2);
+          @include mb(2);
+          font-size: pxTorem(12px);
+          border-bottom: 1px solid $light;
+          width: 70%;
+        }
+        .num{
+          display: block;
+          @include remCalc(height,16);
         }
       }
     }

@@ -176,3 +176,11 @@
     background: $color;
   }
 }
+
+@mixin dot($size:4, $color:$white){
+  @include inline-block;
+  @include remCalc(width,$size);
+  @include remCalc(height,$size);
+  border-radius: 50%;
+  background: $color;
+}
