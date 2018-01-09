@@ -5,7 +5,7 @@ a{text-decoration: none;color: $color-f3;}
 h2,h3,h4,p{margin: 0;}
 ul,li{margin: 0; padding: 0; list-style: none;}
 ::-webkit-input-placeholder{color:#bbb;}
-input{
+input,textarea{
   border: 0;
   outline: none;
 }

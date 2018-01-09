@@ -1,0 +1,89 @@
+.overlayer{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba($black,.5);
+  z-index: 1001;
+}
+
+.thickbox-common{
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 80%;
+  background: $light;
+  > h3{
+    @extend %center;
+    font-size: pxTorem(14px);
+    @include remCalc(padding,10);
+  }
+  .content{
+    @include remCalc(padding,10);
+  }
+  .btn-group{
+    @include flex-box;
+    border-top: $border-light;
+    > a{
+      flex: 1;
+      @extend %center;
+      @include remCalc(line-height,40);
+    }
+    .btn-simple{
+      color: $color-f6;
+    }
+    .btn-primary{
+      background: $green;
+      color: $light;
+    }
+  }
+}
+
+.thickbox{
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 80%;
+  background: $light;
+  .t-header{
+    @include header-style;
+    background: $gray;
+  }
+  .t-content{
+    @include remCalc(padding,10);
+    > textarea{
+      border: 0;
+      width: 100%;
+      @include remCalc(height,150);
+    }
+  }
+  .t-footer{
+    @include flex-box(space-between);
+    @include remCalc(padding,10);
+    font-size: pxTorem(12px);
+    color: $color-f9;
+    > span{
+
+    }
+  }
+  .iptbox{
+    @include remCalc(padding,20);
+  }
+}
+
+.iptbox{
+  @include flex-box;
+  @extend %center;
+  @extend %border-box;
+  width: 100%;
+  > span{
+    flex: 1;
+  }
+  > input{
+    flex: 3;
+    @extend %center;
+  }
+}

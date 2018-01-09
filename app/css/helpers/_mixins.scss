@@ -133,7 +133,25 @@
   @include remCalc(margin,0,2);
 }
 
-@mixin icon-plus($size:18, $width:2, $color:#bbb){
+@mixin icon-subbar($size:18,$width:2, $color:$dark-gray){
+  position: relative;
+  @include inline-block;
+  @extend %border-box;
+  @include remCalc(width,$size);
+  @include remCalc(height,$size);
+  &::before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    display: block;
+    @include remCalc(width,$size);
+    @include remCalc(height,$width);
+    @include remCalc(margin-top,-$width/2);
+    background: $color;
+  }
+}
+
+@mixin icon-plus($size:18, $width:2, $color:$dark-gray){
   position: relative;
   @include inline-block;
   @extend %border-box;
@@ -156,7 +174,7 @@
   }
 }
 
-@mixin icon-hamburger($width:18, $size:2px, $color:#bbb){
+@mixin icon-hamburger($width:18, $size:2px, $color:$dark-gray){
   @include inline-block;
   @extend %border-box;
   position: relative;
@@ -183,4 +201,36 @@
   @include remCalc(height,$size);
   border-radius: 50%;
   background: $color;
+}
+
+//header style
+@mixin header-style($height: 44px, $fontSize: 16px){
+  height: $height;
+  text-align: center;
+  border-bottom: $border-light;
+  @extend %border-box;
+  @include remCalc(padding,0,10);
+  h2{
+    height: $height;
+    line-height:$height;
+    font-size: pxTorem($fontSize);
+  }
+  .title{
+    height: $height;
+    line-height:$height;
+    font-size: pxTorem($fontSize);
+  }
+  > .icons{
+    position: absolute;
+    top:0;
+    width: $height;
+    height: $height;
+    line-height: $height;
+    &:first-child{
+      left: 0;
+    }
+    &:last-child{
+      right: 0;
+    }
+  }
 }

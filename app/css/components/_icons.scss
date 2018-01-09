@@ -11,8 +11,17 @@
   @include icon-hamburger;
 }
 
+.icon-subbar{
+  @include icon-subbar;
+}
+
 .icon-plus{
   @include icon-plus;
+}
+
+.icon-close{
+  @include icon-plus;
+  transform: rotate(45deg);
 }
 
 .icon-arrow-rt{
@@ -21,4 +30,8 @@
 
 .icon-mark{
   @include mark;
+}
+
+.icon-ok{
+  @include mark($dark-gray,16);
 }

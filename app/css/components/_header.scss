@@ -2,27 +2,5 @@
 header{
   @extend %fixed;
   top: 0;
-  height: 44px;
-  text-align: center;
-  border-bottom: $border-light;
-  @extend %border-box;
-  @include remCalc(padding,0,10);
-  h2{
-    height: 44px;
-    line-height:44px;
-    font-size: pxTorem(16px);
-  }
-  > .icons{
-    position: absolute;
-    top:0;
-    width: 44px;
-    height: 44px;
-    line-height: 44px;
-    &:first-child{
-      left: 0;
-    }
-    &:last-child{
-      right: 0;
-    }
-  }
+  @include header-style;
 }
