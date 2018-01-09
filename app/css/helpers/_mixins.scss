@@ -210,12 +210,7 @@
   border-bottom: $border-light;
   @extend %border-box;
   @include remCalc(padding,0,10);
-  h2{
-    height: $height;
-    line-height:$height;
-    font-size: pxTorem($fontSize);
-  }
-  .title{
+  h2, .title{
     height: $height;
     line-height:$height;
     font-size: pxTorem($fontSize);

@@ -604,11 +604,7 @@ header {
   text-align: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0rem 0.625rem; }
-  header h2 {
-    height: 44px;
-    line-height: 44px;
-    font-size: 1rem; }
-  header .title {
+  header h2, header .title {
     height: 44px;
     line-height: 44px;
     font-size: 1rem; }
@@ -785,11 +781,7 @@ footer {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0rem 0.625rem;
     background: #ebebeb; }
-    .thickbox .t-header h2 {
-      height: 44px;
-      line-height: 44px;
-      font-size: 1rem; }
-    .thickbox .t-header .title {
+    .thickbox .t-header h2, .thickbox .t-header .title {
       height: 44px;
       line-height: 44px;
       font-size: 1rem; }
