@@ -17,9 +17,9 @@ const AppFrame = () => (
 	<Router>
 		<div>
 			<header>
-				<span><Link to="/habits"><i className={styles.icons}>=</i></Link></span>
+				<span className={styles.icons}><Link to="/habits"><i className={styles['icon-hamburger']}></i></Link></span>
 				<h2>TODAY</h2>
-				<span><Link to="/add"><i className={styles.icons}>+</i></Link></span>
+				<span className={styles.icons}><Link to="/add"><i className={styles['icon-plus']}></i></Link></span>
 			</header>
 
 			<footer>
