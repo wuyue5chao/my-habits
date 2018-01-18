@@ -70,12 +70,19 @@ class TodayItem extends React.Component{
 	}
 }
 
+const eleTodayList = [
+	{name: '空中自行车', number: 200, unit: '个', log: '第一天 坚持！'},
+	{name: '倒立', number: 30, unit: 'min', log: '瘦腿哈哈！'},
+	{name: '倒立', number: 30, unit: 'min', log: '瘦腿哈哈！'}
+];
+
 class TodayList extends React.Component{
 	render(){
 		return (
 			<section className={styles['centerWrap-index']}>
-				<TodayItem number="200" unit="个" name="空中自行车" log="第一天 坚持！"/>
-				<TodayItem number="30" unit="min" name="倒立" log="瘦腿哈哈！"/>
+				{eleTodayList.map((ele, index) => (
+					<TodayItem key={index} number={ele.number} unit={ele.unit} name={ele.name} log={ele.log} />
+				))}
 			</section>
 		)
 	}

@@ -10,6 +10,7 @@ import styles from './css/app.scss';
 import SiteIndex from './pages/index.js';
 import SiteHabits from './pages/habits.js';
 import SiteDetail from './pages/detail.js';
+import SiteAdd from './pages/add.js';
 
 
 
@@ -79,9 +80,7 @@ const Topic = ({match}) => (
 )*/
 
 const Add = () => (
-	<div className={styles.centerWrap}>
-		<h2>Add</h2>
-	</div>
+	<SiteAdd />
 );
 
 const Habits = () => (

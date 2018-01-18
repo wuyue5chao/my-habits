@@ -18,11 +18,12 @@
     top:0;
   }
 
-  &.open{
+  &.on{
     background: $green;
     border-color: $green;
     .block{
       right: 0;
+      //transition: right 0.5s ease;
     }
   }
 }

@@ -6,6 +6,7 @@ import {
     Link
 } from 'react-router-dom';
 import Canlender from '../js/canlender.js';
+import Switch from '../js/switch.js';
 import styles from '../css/app.scss';
 
 class DetailTop extends React.Component{
@@ -87,9 +88,10 @@ class DetailCanlender extends React.Component{
                     <span>2017年12月</span>
                     <p>
                         <span>显示数量</span>
-                    <span className={styles.switch+' '+styles.open}>
+                        {/*<span className={styles.switch+' '+styles.open}>
                         <i className={styles.block}></i>
-                    </span>
+                    </span>*/}
+                        <Switch/>
                     </p>
                 </div>
                 <div className={styles['canlender-box']}>
