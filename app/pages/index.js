@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Canlender from '../js/canlender.js';
 import styles from '../css/app.scss';
+import SiteDetail from  './detail.js';
 
 class ItemProgress extends  React.Component{
 	render(){
@@ -43,37 +44,37 @@ class ItemOptions extends React.Component{
 class TodayItem extends React.Component{
 	render(){
 		return (
-			<div className={styles['today-list']}>
-				<div className={styles.item}>
-					<div className={styles['itm-habit']}>
-						<div className={styles['h-icon']}>
-							<div className={styles['h-circle']+' '+styles.pass}>
-								<span>{this.props.number}</span>
-								<span>{this.props.unit}</span>
+			<Router>
+				<div className={styles['today-list']}>
+					<div className={styles.item}>
+						<div className={styles['itm-habit']}>
+							<div className={styles['h-icon']}>
+								<div className={styles['h-circle']+' '+styles.pass}>
+									<span>{this.props.number}</span>
+									<span>{this.props.unit}</span>
+								</div>
+							</div>
+							<div className={styles['h-info']}>
+								<p className={styles.name}><strong>{this.props.name}</strong></p>
+								<p className={styles.log}>{this.props.log}</p>
+							</div>
+							<div className={styles['h-set']}>
+								<div><Link to="/detail">detail</Link></div>
 							</div>
 						</div>
-						<div className={styles['h-info']}>
-							<p className={styles.name}><strong>{this.props.name}</strong></p>
-							<p className={styles.log}>{this.props.log}</p>
-						</div>
-						<div className={styles['h-set']}>
-							<div><Link to="/detail">detail</Link></div>
-						</div>
+						<ItemProgress/>
+						<ItemOptions/>
 					</div>
-					<ItemProgress/>
-					<ItemOptions/>
 				</div>
-
-				<Route exact path="/detail" component={Detail}/>
-			</div>
+			</Router>
 		)
 	}
 }
 
 const eleTodayList = [
-	{name: '空中自行车', number: 200, unit: '个', log: '第一天 坚持！'},
-	{name: '倒立', number: 30, unit: 'min', log: '瘦腿哈哈！'},
-	{name: '倒立', number: 30, unit: 'min', log: '瘦腿哈哈！'}
+	{name: '空中自行车', target: 250, number: 200, unit: '个', log: '第一天 坚持！'},
+	{name: '倒立', target: 30, number: 30, unit: 'min', log: '瘦腿哈哈！'},
+	{name: '倒立', target: 30, number: 30, unit: 'min', log: '瘦腿哈哈！'}
 ];
 
 class TodayList extends React.Component{
@@ -100,7 +101,7 @@ class SiteIndex extends React.Component{
 }
 
 const Detail = () => (
-	<div className={styles.centerWrap}>detail</div>
+	<SiteDetail />
 );
 
 export default SiteIndex;

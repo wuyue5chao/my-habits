@@ -981,6 +981,8 @@ footer {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
     .habits-list .itm-habit .icons {
       color: #bbb; }
+    .habits-list .itm-habit > div .txt {
+      margin-left: 0.3125rem; }
     .habits-list .itm-habit > div:first-child {
       flex: 6; }
       .habits-list .itm-habit > div:first-child > p:first-child {

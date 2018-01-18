@@ -11,11 +11,11 @@ class HabitsItem extends React.Component{
                     <p>{this.props.name}</p>
                     <p>
                         <span className={this.props.isGood ? styles.fontgreen : styles.fontred}>{this.props.isGood ? '有益' : '无益'}</span>
-                        <span>{this.props.style ? '记录数量' : '记录是/否'}</span>
+                        <span className={styles.txt}>{this.props.style ? '记录数量' : '记录是/否'}</span>
                     </p>
                 </div>
                 <div>
-                    <a href="add.html"><i className="icons icono-caretRight"></i></a>
+                    <a href="add.html"><i className={styles['icon-arrow-rt']}></i></a>
                 </div>
             </div>
         )
