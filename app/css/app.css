@@ -591,10 +591,10 @@ header, footer, .canlender-fix {
     box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1), 2px 2px 5px rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 0; }
-  .switch.open {
+  .switch.on {
     background: #36C336;
     border-color: #36C336; }
-    .switch.open .block {
+    .switch.on .block {
       right: 0; }
 
 /*header*/
